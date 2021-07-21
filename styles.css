@@ -11,39 +11,6 @@ body {
     margin:0;
 }
 
-a {
-    font-weight:bold;
-    text-decoration:none;
-}
-
-a:visited {color:darkblue;}
-
-
-
-nav {
-    position:relative;
-    top:0px;
-    background-color: #e9c0ed;
-width:100%;
-    padding:10px;
-    margin:-10px;
-    height:3rem;
-   
-   
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    padding-inline-start: 0px;;
-    
-}
-nav li {
-    list-style: none;
-    padding: 0px 40px;
-
-}
-
 #wrapper {
     position:relative;
     width:100%;
@@ -61,38 +28,32 @@ nav li {
     src: url('resources/Gilbert-Color\ Bold\ Preview5.otf');
 }
 
+@font-face {
+    font-family: 'Dreamland';
+    src: url('resources/Dreamland-0vWd.ttf');
+}
 h1 {
-    font-family: 'Fredoka One';
+    font-family: 'Gilbert';
     font-size:5rem;
     letter-spacing:2px;
     color:#f8f27e;
     text-align: center;
-    text-shadow:4px 4px #e9c0ed;
-    margin:20px 0px;
-    position:relative;
+    text-shadow:2px 2px #e9c0ed;
+    margin-bottom:10px;
 }
 
 
 h2 {
-    font-family: 'Fredoka One';
+    font-family: 'Gilbert';
     font-size:2.5rem;
     letter-spacing:2px;
     line-height: -4px;
     color:#f8f27e;
     text-align: center;
-    text-shadow:4px 4px #e9c0ed;
+    text-shadow:2px 2px #e9c0ed;
     padding:0;
-    margin-top:30px;
-    margin-bottom:30px;
-}
-
-.newcolor {
-    color:#e9c0ed;
-    text-shadow: 2px 2px #f8f27e;
-}
-
-h3 {
-    text-align: center;
+    margin-top:50px;
+    margin-bottom:0px;
 }
 
 
@@ -112,69 +73,45 @@ img {
     width:100%;
 }
 
-.container {
+#textcontainer {
     display:flex;
 justify-content: center;
-flex-wrap: wrap;
 }
 
 .text_sub_container {
     max-width:50%;
     text-align: center;
-    padding:1rem 0rem;
-    margin:auto;
 }
 
-#projects {
-    padding: 1rem 0rem;
+#photoscontainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:1rem;
+    padding-bottom: 1rem;
 }
 
-.project {
+.photo {
     max-width: 300px;
-    min-width:225px;
+    max-height:420px;
     overflow:hidden;
     flex-grow: 1;
     flex-basis: 0;
     position:relative;
-    
+}
+.photo img {
+    max-height:100%;
 }
 
-.project-image{
-    position:relative;
-    max-width: 300px;
-    max-height:300px;
-    overflow:hidden;
+.hypnotic {
+    text-transform: uppercase;
+    font-family: 'Dreamland';
+    font-size:2rem;
 }
-
-.project-text {
-    padding:20px;
-}
-.project img {
-    width:100%;
-}
-
 
 #last {
-    padding: 3rem 0rem;
+    padding-bottom: 30px;
 }
-
-.cryptedmail:after {
-    content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
-  }
-
-  #Contact {
-      padding: 1.75rem 0rem 4.5rem 0rem;
-  }
-
-  #Contact img {
-      max-width: 50px;
-  }
-
-  #social {
-      display: flex;
-      justify-content: center;
-  }
-
 #footer {
     position:relative;
     bottom:0px;
@@ -256,18 +193,6 @@ flex-wrap: wrap;
       
   }
 
-  #rectangle-center {
-    background-color: #c9f8f6;
-    width: 400px;
-    height:100px;
-    border-radius:25px;
-  position:absolute;
-  bottom:450px;
-  left:300px;
-  z-index:-1;
-  transform:rotate(-35deg);
-    
-}
 
   #circle-right {
     position:absolute;
@@ -289,7 +214,7 @@ border-width: 200px 400px 200px 0;
 border-color: transparent #007bff transparent transparent;
 position:absolute;
 z-index: -1;
-top:500px;
+top:700px;
 left: 300px;
 transform: rotate(45deg);
 }
@@ -319,53 +244,27 @@ transform: rotate(45deg);
     
 }
 
-@media screen and (max-width:600px){
-    nav {
-        padding-bottom:0px;
-        margin:0px 0px 10px 0px;
-
+@media screen and (max-width:800px){
+    #more-stuff {
+        padding-bottom:100px;
     }
-    nav li {
-        font-size:.65rem;
-        padding:0px 20px;
-    } 
+}
 
+@media screen and (max-width:600px){
+    
     h1 {
         line-height: .8;
         padding-bottom:1rem;
-        font-size:3rem;
     }
-h2 {
-    font-size:1.5rem;
-}
+    #fruitscontainer {
+        max-width:100%;
+    }
+    .fruit {
+        max-width:75px;
+        padding:0 1em 0 1em;
+    }
     p {
         font-size:1rem;
     }
-
-    .project-text {
-        font-size: 0.75rem;;
-    }
-
-    #email {
-        font-size:small;
-    }
 }
 
-@media screen and (max-width:350px){
-    nav li {
-        font-size:.5rem;
-        padding: 0px 10px;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }    
-    h3 {
-        font-size:.85rem;
-    }
-
-    p {
-        font-size:0.85rem;
-    }
-
-  
-}
