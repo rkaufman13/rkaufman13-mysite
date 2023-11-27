@@ -1,0 +1,33 @@
+.project-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(800px - (30px * 2));
+}
+
+.project-hero {
+  height: 250px;
+  width: 315px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  margin: 1rem 0.5rem;
+}
+
+.project-content {
+  width: 315px;
+}
+
+.post-list {
+  margin-top: 2rem;
+}
+
+.project-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
