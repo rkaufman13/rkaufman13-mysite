@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Hello, Electron"
+categories: housekeeping
+excerpt_separator: <!--more-->
+---
+
+I mentioned that I wanted to experiment with packaging [2048-invaders](/2048-invaders.html) as an Electron app to see if it improved performance. Turns out, Electron is easy (and awesome)!
+
+There are a ton of very opinionated templates out there to turn a Phaser game into an Electron app. I experimented with a few of them, but they all did more than I needed and seemed to require far more configuration than I wanted to deal with. It's just a silly space shooter!
+
+<!--more-->
+
+What I ended up doing was just...following the [official Electron getting-started tutorial](https://www.electronjs.org/docs/latest/tutorial/tutorial-prerequisites).
+
+Step 1: install your prerequisites
+Step 2: tell your `package.json` that the entry point for your app is called `main.js`
+Step 3: write main.js. I essentially copied the boilerplate code here:
+
+```
+const { app, BrowserWindow } = require('electron')
+
+const createWindow = () => {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600
+  })
+
+  win.loadFile('index.html')
+}
+
+app.whenReady().then(() => {
+  createWindow()
+
+  app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow()
+    }
+  })
+})
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+```
+
+And that's literally all you need to run a Phaser game in Electron. The app is still loading Phaser.js itself from the CDN, but I don't care about that -- my hope was that by bundling my assets (images and music) locally, the game would run more smoothly, and it does. (I don't know why this is, because Phaser is supposed to preload everything before it starts up, but hey, computers.)
+
+To actually package the app for distribution, I again followed the tutorial and used Electron Forge. This is as simple as installing electron-forge as a dev dependency, initializing it for use with the project, and then running `electron-forge make`. It feels kind of like magic.
