@@ -5,6 +5,7 @@ date: 2023-10-24 12:16:11 -0500
 categories: projects
 permalink: "noodle-app"
 hero: "noodleapp.png"
+built: June-September 2023
 ---
 
 ![the homepage of "Noodle"](./assets/noodleapp.png)
@@ -15,6 +16,6 @@ Enter Noodle, which, if its name bears any resemblance to That Other App, is tot
 
 Users can create an event (without creating an account), manage the event, send the event link to their friends to respond, close the event, and delete the event, all without seeing any ads or having to manage passwords.
 
-I built it using Firebase, React, and a tiny bit of node/express for the backend server methods/to have a safe place to store my Sendgrid API keys. My husband helped configure the nginx server it runs on and my sister helped make it more accessible for people using screen readers. The app is free to use for everyone (for now).
+I built it using Firebase, React, and a tiny bit of node/express for the backend server methods/to have a safe place to store my Sendgrid API keys. My husband helped configure the nginx server it runs on and my sister helped make it more accessible for people using screen readers. The app is free to use for everyone.
 
-[Check it out](https://noodleapp.cool)
+[Check it out!](https://noodleapp.cool)

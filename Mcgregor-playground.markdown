@@ -5,6 +5,7 @@ date: 2023-11-24 12:16:11 -0500
 categories: projects
 permalink: "mcgregor-playground"
 hero: "mcgregor-playground.png"
+built: November 2023
 ---
 
 ![A partially colored in "McGregor" map](./assets/mcgregor-playground.png)

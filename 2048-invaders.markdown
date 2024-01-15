@@ -5,6 +5,7 @@ date: 2023-11-22 12:16:11 -0500
 categories: projects
 permalink: "2048-invaders"
 hero: "2048-invaders.png"
+built: November 2023
 ---
 
 ![2048 invaders logo](./assets/2048-invaders.png)
