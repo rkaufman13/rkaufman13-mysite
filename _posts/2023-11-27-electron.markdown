@@ -49,3 +49,5 @@ app.on('window-all-closed', () => {
 And that's literally all you need to run a Phaser game in Electron. The app is still loading Phaser.js itself from the CDN, but I don't care about that -- my hope was that by bundling my assets (images and music) locally, the game would run more smoothly, and it does. (I don't know why this is, because Phaser is supposed to preload everything before it starts up, but hey, computers.)
 
 To actually package the app for distribution, I again followed the tutorial and used Electron Forge. This is as simple as installing electron-forge as a dev dependency, initializing it for use with the project, and then running `electron-forge make`. It feels kind of like magic.
+
+P.S. Don't forget to [sign your app](https://www.electronjs.org/docs/latest/tutorial/code-signing)!
