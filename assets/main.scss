@@ -46,13 +46,13 @@ $huge: 2000px;
 }
 
 @include media-query($on-palm, $on-laptop) {
-  img {
+  img.post {
     max-width: 100%;
   }
 }
 
 @include media-query($on-laptop, $huge) {
-  img {
+  img.post {
     max-width: 80% !important;
   }
 }
