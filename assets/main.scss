@@ -57,5 +57,21 @@ $huge: 2000px;
   }
 }
 
+@mixin tiger-table-even {
+  background-color: #dedede;
+}
+
+@mixin tiger-table-odd {
+  background-color: #efefef;
+}
+
+tr:nth-child(even) {
+  @include tiger-table-even();
+}
+
+tr:nth-child(odd) {
+  @include tiger-table-odd();
+}
+
 // Import partials from the `whiteglass` theme.
 @import "whiteglass";
