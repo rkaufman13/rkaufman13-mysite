@@ -3,6 +3,7 @@ layout: post
 title: "Hello, Electron"
 categories: housekeeping
 excerpt_separator: <!--more-->
+project: "2048 invaders"
 ---
 
 I mentioned that I wanted to experiment with packaging [2048-invaders](/2048-invaders.html) as an Electron app to see if it improved performance. Turns out, Electron is easy (and awesome)!

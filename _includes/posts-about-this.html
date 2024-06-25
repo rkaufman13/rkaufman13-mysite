@@ -1,0 +1,11 @@
+{%assign relevant_posts = site.posts |
+where_exp:"post":"post.project==page.title"%} {%if relevant_posts.size >0%}
+
+<div style="margin-top: 3rem"><h2>Posts about {{page.title}}:</h2></div>
+<ul>
+  {%for post in relevant_posts %}
+  <li><a href="{{post.url}}">{{post.title}}</a></li>
+
+  {%endfor%}
+</ul>
+{%else%} {%endif%}
