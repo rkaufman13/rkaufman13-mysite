@@ -2,6 +2,7 @@
 layout: post
 title: "Typescript-ifying Noodle"
 categories: things-i-learned
+project: "Noodle"
 excerpt_separator: <!--more-->
 ---
 
@@ -20,7 +21,7 @@ Separately from the conversation I'm having with myself about how to ensure code
 We use TS at work, but I'd never started with a JS project and had to convert it mid-stream. The resources I have found that have helped are:
 
 - [Typescript's official page on migrating to TS](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
-- [React's docs on adding TS to an existing project built with create-react-app](https://create-react-app.dev/docs/adding-typescript/)  The docs are a bit out of date for TS 5+; you'll also need to add this to your package.json:
+- [React's docs on adding TS to an existing project built with create-react-app](https://create-react-app.dev/docs/adding-typescript/) The docs are a bit out of date for TS 5+; you'll also need to add this to your package.json:
 
 ```json
  "overrides": {

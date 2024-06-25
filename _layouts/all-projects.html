@@ -5,10 +5,11 @@ layout: default
 {%include all-projects-css.html%}
 
 <div class="project-parent">
-  {% for page in site.pages %} {% if page.categories !="projects"%} {%else%} {%
-  capture page_lang %}{{ page.lang | default: site_lang }}{% endcapture %} {%
-  capture lang %}{% if page_lang != site_lang %}{{ page_lang }}{% endif %}{%
-  endcapture %}
+  {% assign sorted_pages = site.pages | sort:"date" | reverse %} {% for page in
+  sorted_pages %} {% if page.categories !="projects"%} {%else%} {% capture
+  page_lang %}{{ page.lang | default: site_lang }}{% endcapture %} {% capture
+  lang %}{% if page_lang != site_lang %}{{ page_lang }}{% endif %}{% endcapture
+  %}
 
   <div class="project">
     <header class="project-header">
@@ -25,7 +26,15 @@ layout: default
       </h3>
     </header>
     <div class="project-content">
-      <img src="/assets/{{ page.hero }}" class="project-hero" />
+      {% if page.external-url %}
+      <a class="page-link" href="{{ page.external-url }}"
+        ><img src="/assets/{{ page.hero }}" class="project-hero"
+      /></a>
+      {% else %}
+      <a class="page-link" href="{{ page.url | relative_url }}"
+        ><img src="/assets/{{ page.hero }}" class="project-hero"
+      /></a>
+      {% endif %}
     </div>
   </div>
   {%endif%} {% endfor %}

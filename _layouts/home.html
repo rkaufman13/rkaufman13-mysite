@@ -52,7 +52,8 @@ layout: default
 
   <h2>Projects</h2>
   <div class="project-list">
-    {% for page in site.pages limit:3 %}
+    {% assign sorted_pages = site.pages | sort:"date" | reverse %}
+    {% for page in sorted_pages limit:2 %}
     {% if page.categories !="projects"%}
         
     {%else%}
@@ -78,7 +79,7 @@ layout: default
   
 
 </div>
-<div style="text-align: right;font-size: large;"><a href="all-projects.html">> > >All projects</a></div>
-  {% include pagination.html %}
+<div style="text-align: right;font-size: large;"><a href="all-projects/">> > >All projects</a></div>
+
 
 </div>

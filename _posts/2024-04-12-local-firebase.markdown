@@ -3,6 +3,7 @@ layout: post
 title: "Local Firebase, or, how I learned to stop trashing my prod db"
 categories: things-i-learned
 excerpt_separator: <!--more-->
+project: "Noodle"
 ---
 
 [Noodle](https://noodleapp.cool) has a lot of the hallmarks of a solo dev side project, which is fair, because it is. Stupid simple deploy pipeline (which is probably a good thing), no tests to speak of (probably not a good thing), no real dev environment. That means when I test Noodle locally I hook up to the prod Firebase db, and usually end up writing a lot of bogus data to it along the lines of:
