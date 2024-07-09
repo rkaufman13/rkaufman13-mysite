@@ -14,10 +14,8 @@ Most Americans do not eat enough fruit and vegetables, and I am among them. Howe
 
 That was my inspiration behind [Fruit Tracker](https://gallery.fitbit.com/details/74375fbf-752f-4ead-8d08-72293e63082a), which is a dead-simple Fitbit app. Turn it on after you've had a banana or a salad, estimate how many servings of fruit and veg it represents, and tap the counter to increase (or decrease) your serving count.
 
-The counter remembers how many fruits and vegetables you ate for a day, and then resets. That's it.
+The counter remembers, until the day after tomorrow, how many fruits and vegetables you ate today, and then resets. That's it.
 
-I use this now in conjunction with the FOSS app [Loop Habit Tracker](https://play.google.com/store/apps/details?id=org.isoron.uhabits&hl=en_US). A popup appears at 8am every morning asking "how many fruits and vegetables did you eat yesterday?" and my wrist now tells me.
+I use this now in conjunction with the FOSS app [Loop Habit Tracker](https://play.google.com/store/apps/details?id=org.isoron.uhabits&hl=en_US). A popup appears at 8am every morning asking "how many fruits and vegetables did you eat yesterday?" and my wrist now reminds me.
 
-In truth, this could be used for anything that you want to track daily, as long as the quantity is single-digits and you don't mind the icon being an apple. There are already some lovely [water](https://gallery.fitbit.com/details/a845c4b2-e667-4b8e-ab7a-82375eafd0b3) apps for Fitbit, but maybe you want to track the number of times you took a stretch break during the workday? Or the number of miles you hike? (Of course, if you have a Fitbit it probably already knows your distance).
-
-[Fruit Tracker](https://gallery.fitbit.com/details/74375fbf-752f-4ead-8d08-72293e63082a) is available, free, on the Fitbit Gallery for Sense, Versa 2 and Versa 3 (for as long as the Gallery remains open).
+[Fruit Tracker](https://gallery.fitbit.com/details/74375fbf-752f-4ead-8d08-72293e63082a) is available, free, on the [Fitbit Gallery](https://gallery.fitbit.com/details/74375fbf-752f-4ead-8d08-72293e63082a)  for Sense, Versa 2 and Versa 3.

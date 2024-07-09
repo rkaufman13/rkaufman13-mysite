@@ -8,7 +8,7 @@ hero: "2048-invaders.png"
 built: November 2023
 ---
 
-![2048 invaders logo](./assets/2048-invaders.png)
+![2048 invaders logo](./assets/2048_invaders.gif)
 
 [2048 Invaders](https://megara133.itch.io/2048-invaders) is a math-themed space shooter. The goal is to reach 2048 by hitting matching powers of 2. Hit two 2s in a row, and they will become 4. Hit two 4s, they will become 8. And so on. I'm not sure if it's possible to beat this game, as I haven't managed to make it past 256.
 
