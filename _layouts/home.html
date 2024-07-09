@@ -71,7 +71,12 @@ layout: default
         </h3>
       </header>
       <div class="project-content">
-        <img src="../assets/{{ page.hero }}" class="project-hero">
+        {% if page.external-url %}
+        <a class="page-link" href="{{ page.external-url }}">
+      {% else %}
+        <a class="page-link" href="{{ page.url | relative_url }}">
+      {% endif %}
+      <img src="../assets/{{ page.hero }}" class="project-hero"></a>
       </div>
     </div>
     {%endif%}
