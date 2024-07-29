@@ -52,34 +52,29 @@ layout: default
 
   <h2>Projects</h2>
   <div class="project-list">
-    {% assign sorted_pages = site.pages | sort:"date" | reverse %}
-    {% for page in sorted_pages limit:2 %}
-    {% if page.categories !="projects"%}
-        
-    {%else%}
-    {% capture page_lang %}{{ page.lang | default: site_lang }}{% endcapture %}
-    {% capture lang %}{% if page_lang != site_lang %}{{ page_lang }}{% endif %}{% endcapture %}
-
+    {% assign items = site.projects | sort: 'date' | reverse %}
+    {% for project in items limit:2 %}
+  
     <div class="project">
       <header class="project-header">
         <h3 class="project-title">
-          {% if page.external-url %}
-            <a class="page-link" href="{{ page.external-url }}">{{ page.title | escape }}</a>
+          {% if project.external-url %}
+            <a class="page-link" href="{{ project.external-url }}">{{ project.title | escape }}</a>
           {% else %}
-            <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+            <a class="page-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
           {% endif %}
         </h3>
       </header>
       <div class="project-content">
-        {% if page.external-url %}
-        <a class="page-link" href="{{ page.external-url }}">
-      {% else %}
-        <a class="page-link" href="{{ page.url | relative_url }}">
-      {% endif %}
-      <img src="../assets/{{ page.hero }}" class="project-hero"></a>
+        {% if project.external-url %}
+        <a class="page-link" href="{{ project.external-url }}">
+         {% else %}
+        <a class="page-link" href="{{ project.url | relative_url }}">
+         {% endif %}
+      <img src="../assets/{{ project.hero }}" class="project-hero"></a>
       </div>
     </div>
-    {%endif%}
+   
   {% endfor %}
   
 

@@ -23,8 +23,11 @@ email: rkaufman13@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I'm a full-stack developer. I build web apps in Java, Javascript, and Python.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://readwriterachel.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: rkaufman13
+collections:
+  projects:
+    output: true
 
 # Build settings
 theme: jekyll-whiteglass

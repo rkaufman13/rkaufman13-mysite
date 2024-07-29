@@ -3,9 +3,10 @@ layout: post
 title: "Building a Queens clone in React"
 categories: stuff-i-made
 excerpt_separator: <!--more-->
+project: "Infinite Queens"
 ---
 
-![This is a queen, right? I'm actually terrible at chess](assets/queens-header.jpg)
+![This is a queen, right? I'm actually terrible at chess](/assets/queens-header.jpg)
 
 I have nearly a 50-day streak on [Queens](https://www.linkedin.com/showcase/queens-game/), a daily game from [the worst social network](https://www.linkedin.com). The fact that LinkedIn has managed to trick me into visiting daily is not lost on me, but man, it's a fun game.
 

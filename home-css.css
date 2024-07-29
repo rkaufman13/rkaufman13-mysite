@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   width: calc(800px - (30px * 2));
-
 }
+
 
 .project-hero {
   height: 250px;
@@ -22,6 +22,7 @@
   box-shadow: 5px 5px 5px #bbb;
   border: 1px solid black;
 }
+
 
 .project-content {
   width: 315px;

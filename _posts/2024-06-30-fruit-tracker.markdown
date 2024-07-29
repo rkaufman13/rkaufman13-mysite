@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 project: "Fruit Tracker"
 ---
 
-![Image of a beautiful apple in the grass](assets/apple.jpg)
+![Image of a beautiful apple in the grass](/assets/apple.jpg)
 
 [My first Fitbit app](/fruit-tracker.html) is live in the [Fitbit app store](https://gallery.fitbit.com/details/74375fbf-752f-4ead-8d08-72293e63082a).
 
