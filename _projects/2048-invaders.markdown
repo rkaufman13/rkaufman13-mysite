@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: project
 title: "2048 invaders"
-date: 2023-11-22 12:16:11 -0500
-categories: projects
+date: 2023-11-22
+categories: game
 permalink: "2048-invaders"
 hero: "2048-invaders.png"
 built: November 2023

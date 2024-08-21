@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{%include project-css.html%}
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+<div class="badges"><div class="badge">{{page.categories}}</div><div class="badge">Built: {{page.built}}</div></div>
+  <div class="post-content">{{ content }}</div>
+
+  {%include posts-about-this.html %}
+
+  <div style="margin-top: 3rem">
+    <a href="all-projects/"><< All Projects</a>
+  </div>
+</article>

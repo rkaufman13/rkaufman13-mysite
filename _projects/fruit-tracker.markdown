@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: project
 title: "Fruit Tracker"
-date: 2024-06-20 12:16:11 -0500
-categories: projects
+date: 2024-06-20
+categories: app
 permalink: "fruit-tracker"
 hero: "fruit-tracker-crop.png"
 built: Spring 2024

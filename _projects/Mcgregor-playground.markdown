@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: project
 title: "McGregor Playground"
-date: 2023-11-24 12:16:11 -0500
-categories: projects
+date: 2023-11-24
+categories: toy
 permalink: "mcgregor-playground"
 hero: "mcgregor-playground.png"
 built: November 2023

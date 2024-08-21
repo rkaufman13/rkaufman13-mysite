@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: project
 title: "Noodle"
-date: 2023-10-24 12:16:11 -0500
-categories: projects
+date: 2023-10-24
+categories: app
 permalink: "noodle-app"
 hero: "noodleapp.png"
 built: June-September 2023
