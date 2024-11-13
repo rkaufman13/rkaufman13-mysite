@@ -11,7 +11,10 @@ layout: default
 
   <ul class="post-archives">
     {% for post in site.posts %}
-      {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
+    {%if post.hidden == true %}
+    {%continue%}
+    {%endif%}
+      {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %} 
       {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
 
       <li>
