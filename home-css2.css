@@ -9,6 +9,12 @@
     height: 150px;
     width: 200px;
   }
+
+  .small-hero {
+    width: 450px;
+    float: left;
+    padding: 0 30px;
+  }
 }
  
 
