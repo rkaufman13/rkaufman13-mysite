@@ -55,8 +55,7 @@ layout: null
       <published>{{ post.date | date_to_xmlschema }}</published>
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
-      <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">{{ post.content | strip | xml_escape | truncate: '1000'}}</content>
-
+     
       {% assign post_author = post.author | default: post.authors[0] | default: site.author %}
       {% assign post_author = site.data.authors[post_author] | default: post_author %}
       {% assign post_author_email = post_author.email | default: nil %}
@@ -83,8 +82,8 @@ layout: null
         <category term="{{ tag | xml_escape }}" />
       {% endfor %}
 
-      {% if post.excerpt and post.excerpt != empty %}
-        <summary type="html">{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</summary>
+      {% if post.description and post.description != empty %}
+        <summary type="html">{{ post.description | strip_html | normalize_whitespace | xml_escape }}</summary>
       {% endif %}
 
       {% assign post_image = post.twitter_card.image | default: post.facebook.image %}
