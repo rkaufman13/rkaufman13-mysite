@@ -3,7 +3,7 @@ layout: post
 title: Composing Functions in Python
 categories: things-i-learned
 excerpt_separator: <!--more-->
-description: 
+description: A very 101-level look
 image: /assets/beethoven.jpg
 ---
 
