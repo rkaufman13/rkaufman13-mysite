@@ -13,8 +13,8 @@ layout: default
   <hr/>
   <h2>Projects</h2>
   <div class="project-list">
-    {% assign items = site.projects | sort: 'date' | reverse %}
-    {% for project in items limit:3 %}
+    {% assign items = site.projects | sort: 'date' | reverse | sample: 3%}
+    {% for project in items %}
   
     <div class="project">
       <header class="project-header">
@@ -40,7 +40,7 @@ layout: default
   
 
 </div>
-<div style="text-align: right;font-size: large;"><a href="all-projects/">> > >All projects</a></div>
+<div style="text-align: right;font-size: large;" id="all-projects"><a href="all-projects/">> > >All projects</a></div>
 
 
 
