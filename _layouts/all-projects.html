@@ -4,26 +4,6 @@ layout: default
 
 {%include all-projects-css.html%}
 
-<!-- {% for project in site.projects %}
-{% for category in project.categories %}
-  {% capture my_categories %}
-    {% if my_categories %}
-      {{ my_categories | join: "," }},{{ category }}
-    {% else %}
-       {{ category }}
-    {% endif %}
-  {% endcapture %}
-{% endfor %}
-
-{% endfor %}
-
-{% assign my_categories = my_categories | split: "," | uniq %}
-
-{% for cat in my_categories %}
-<a href="{{cat}}">
-  {{cat}}</a> | 
-{% endfor %} -->
-
 <div class="project-parent">
   
   {% assign items = site.projects | sort: 'date' %}
