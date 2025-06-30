@@ -91,9 +91,15 @@ flex-direction: row;
   
 }
 
+img {
+  vertical-align: bottom;
+}
+
 img + em {
 font-size: smaller;
-color:#bbb
+color:#bbb;
+clear:both;
+display:block;
 }
 
 td > em {
