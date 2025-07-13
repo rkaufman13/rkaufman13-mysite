@@ -107,3 +107,9 @@ padding:15px;
 display:block;
 font-style: normal;
 }
+
+/* Post-related styles */
+.related-posts {
+  border-top: 1px solid #bbb;
+  padding-top:1em;
+}
