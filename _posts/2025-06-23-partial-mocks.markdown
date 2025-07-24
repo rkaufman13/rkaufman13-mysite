@@ -78,7 +78,7 @@ class SomeTestClass(){
  int result2 = myClass.SomeOtherMethod();
 
  assertEquals(2, result); //true because we have mocked the behavior of this method
- assertEquals(3, result); //true because the real method returns 3
+ assertEquals(3, result2); //true because the real method returns 3
 }
 ```
 
