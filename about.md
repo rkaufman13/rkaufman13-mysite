@@ -23,4 +23,6 @@ I'm also active as an organizer in [Women & Gender eXpansive Coders DC](https://
 
 I have a [LinkedIn page](https://www.linkedin.com/in/rachelkaufman13/) that you might be interested in visiting (note: I mostly don't accept connection requests from strangers), as well as a [Github](https://www.linkedin.com/in/rachelkaufman13/). Oh, and I [give talks](https://www.meetup.com/women-and-gender-expansive-coders-dc-wgxc-dc/events/303967242/?eventOrigin=your_events), too. Say [hello](mailto:rkaufman13 at gmail dot com)?
 
+{%include breaking-news.html%}
+
 [<< Home]({{site.url}})

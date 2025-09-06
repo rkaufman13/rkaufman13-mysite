@@ -113,3 +113,20 @@ font-style: normal;
   border-top: 1px solid #bbb;
   padding-top:1em;
 }
+
+/*micro post styles*/
+.micro h1 {
+  font-size: small;
+}
+
+.micro-homepage {
+margin: 10px 0;
+  padding: 15px 10px 10px 10px;
+  border-top: 4px solid #ddd;
+}
+
+.micro-homepage span {
+  font-size: x-small;
+  text-transform: uppercase;
+  color: #555;
+}
