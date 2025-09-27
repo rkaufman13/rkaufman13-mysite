@@ -14,6 +14,9 @@ layout: default
     {%if post.hidden == true %}
     {%continue%}
     {%endif%}
+    {% if post.categories contains "micro"%}
+    {%continue%}
+    {% endif %}
       {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %} 
       {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
 
