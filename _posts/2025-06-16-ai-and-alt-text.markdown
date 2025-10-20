@@ -2,6 +2,7 @@
 layout: post
 title: "What I Learned This Week: AI and Alt Text (Don't Do It)"
 categories: things-i-learned
+tags: accessibility
 excerpt_separator: <!--more-->
 description: The tech is not yet ready to replace people.
 image: /assets/alt-text-pizza.png

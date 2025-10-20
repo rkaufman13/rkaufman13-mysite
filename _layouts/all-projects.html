@@ -30,12 +30,12 @@ layout: default
     <div class="project-content">
    
       {% if project.external-url %}
-      <a class="project-link" href="{{ project.external-url }}"
-        ><img src="/assets/{{ project.hero }}" class="project-hero"
+      <a class="project-link" href="{{ project.external-url }}" aria-label="{{project-title}}"
+        ><img src="/assets/{{ project.hero }}" class="project-hero" alt="{{project-title}}"
       /></a>
       {% else %}
-      <a class="project-link" href="{{ project.url | relative_url }}"
-        ><img src="/assets/{{ project.hero }}" class="project-hero"
+      <a class="project-link" href="{{ project.url | relative_url }}" aria-label="{{project-title}}"
+        ><img src="/assets/{{ project.hero }}" class="project-hero" alt="{{project-title}}"
       /></a>
       {% endif %}
     </div>

@@ -5,6 +5,8 @@ main:
     url: /about/
   - title: "All projects"
     url: /all-projects/
+  - title: "Speaking"
+    url: /speaking/
   - title: "GitHub"
     url: https://github.com/rkaufman13
   - title: "LinkedIn"
