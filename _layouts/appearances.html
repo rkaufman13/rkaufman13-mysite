@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<h1>Speaking Appearances</h1>
+
+{% assign current_date = 'now' | date: '%s' %}
+{% assign all_appearances = site.data.speaking_appearances | sort:'event_date' %}
+<h2>Upcoming</h2>
+
+{% for row in all_appearances %}
+{% assign date_to_check = row.event_date | date: '%s' %}
+{% if date_to_check > current_date %}
+<p> {{row.event_date | date: '%B %d, %Y'}}: 
+{%if row.link%}
+<a href="{{row.link}}">
+  {%endif%}
+    {{row.talk}} - 
+{%if row.link%}
+</a>  
+{%endif%}
+
+{{row.venue}}
+  
+</p>
+{%endif%}
+{% endfor %}
+
+<h2>Past</h2>
+{% assign past_appearances = site.data.speaking_appearances | sort:'event_date' | reverse %}
+{% for row in past_appearances %}
+{% assign date_to_check = row.event_date | date: '%s' %}
+{% if date_to_check <= current_date %}
+<p> {{row.event_date | date: '%B %d, %Y'}}: 
+{%if row.link%}
+<a href="{{row.link}}">
+  {%endif%}
+    {{row.talk}}
+{%if row.link%}
+</a>  
+{%endif%}
+
+ - {{row.venue}}
+  
+</p>
+{%endif%}
+{% endfor %}

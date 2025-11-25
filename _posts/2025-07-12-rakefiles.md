@@ -4,6 +4,7 @@ title: "Some Basic Rake Tasks for Jekyll Users"
 categories: things-i-learned
 excerpt_separator: <!--more-->
 description: Anyone with a Jekyll blog is welcome to these.
+tags: jekyll
 image: /assets/zen-garden.jpg
 ---
 

@@ -20,6 +20,10 @@
     float: left;
     padding: 0 30px;
   }
+
+  video {
+  max-width: 100%;
+  }
 }
  
 
