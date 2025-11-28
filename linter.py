@@ -1,11 +1,16 @@
 import os
 from html.parser import HTMLParser
 
+REQUIRED_ATTRS_FOR_VIDEO = ['playsinline','muted']
 class DisallowedAttributeException(BaseException):
     def __init__(self, attr, tag, filename):
         message = f"We don't allow {attr[0]} in {tag} round these parts. Check {filename} for more info"
         super().__init__(message)
 
+class MissingAttributeException(BaseException):
+    def __init__(self, attrs, tag, filename):
+        message = f"{tag} requires the following attributes: {attrs}. Check {filename} for more info"
+        super().__init__(message)
 class MyParser(HTMLParser):
 
     def __init__(self, doc):
@@ -17,6 +22,10 @@ class MyParser(HTMLParser):
             for attr in attrs:
                 if attr[0]=="width" or attr[0]=="height":
                     raise DisallowedAttributeException(attr, tag, self.doc)
+        elif tag=='video':
+            required_attrs = set([attr[0] for attr in attrs]) & set(REQUIRED_ATTRS_FOR_VIDEO)
+            if (len(required_attrs)!=len(REQUIRED_ATTRS_FOR_VIDEO)):
+                raise MissingAttributeException(REQUIRED_ATTRS_FOR_VIDEO, tag, self.doc)
         
 
 
