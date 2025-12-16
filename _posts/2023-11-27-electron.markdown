@@ -3,6 +3,7 @@ layout: post
 title: "Hello, Electron"
 categories: housekeeping
 excerpt_separator: <!--more-->
+description: Electron is easy to hate, but also easy to use.
 project: "2048 invaders"
 ---
 

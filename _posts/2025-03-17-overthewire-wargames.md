@@ -3,6 +3,7 @@ layout: post
 title: "Cool Discovery: Over the Wire's Wargames"
 categories: things-i-learned
 tags: command-line linux
+description: How to become a 1337 h4xx0r in 20 easy steps.
 excerpt_separator: <!--more-->
 ---
 

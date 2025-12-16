@@ -2,6 +2,10 @@
   font-size: 14px;
 }
 
+.highlight pre{
+  white-space: pre-wrap;
+}
+
 
 @media screen and (min-width:801px){
   .project-list {

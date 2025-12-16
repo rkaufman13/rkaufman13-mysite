@@ -4,6 +4,7 @@ title: "Typescript-ifying Noodle"
 categories: things-i-learned
 project: "Noodle"
 excerpt_separator: <!--more-->
+description: Javascript is great because it lets you do anything. ANYthing.
 ---
 
 ![Javascript is great because it lets you do anything](/assets/javascript-is-fun.jpeg)

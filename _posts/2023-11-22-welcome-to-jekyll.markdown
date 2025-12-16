@@ -3,6 +3,7 @@ layout: post
 title: "Hello, world"
 categories: housekeeping
 excerpt_separator: <!--more-->
+description: First post, first time using Jekyll!
 ---
 
 First post, first time using Jekyll!

@@ -2,6 +2,7 @@
 layout: post
 title: "Common Errors When Developing for Fitbit"
 categories: things-i-learned
+description: These are not scrutable errors.
 excerpt_separator: <!--more-->
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Firebase Crashlytics and Feature Flagging, or What I Learned at WITS Spring 2024"
 categories: things-i-learned
+description: A hands-on workshop on mobile app development.
 excerpt_separator: <!--more-->
 ---
 
@@ -79,7 +80,7 @@ The steps to set up Remote Config are the same as above: connect your app to Fir
 
 Let's say you're planning to roll out a new feature and you want to be able to hide the button to launch the new feature until it's ready. We can set a boolean showButton flag like so:
 
-```
+```kotlin
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier, showButton:Boolean) {
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {

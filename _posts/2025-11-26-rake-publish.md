@@ -4,6 +4,7 @@ title: "A Handy Shell Script to Publish Jekyll Drafts"
 categories: things-i-learned
 tags: jekyll bash
 excerpt_separator: <!--more-->
+description: The quest to remove friction from posting to this blog continues.
 ---
 
 ![Randall Munroe as usual nails it.](/assets/automation_2x.png)

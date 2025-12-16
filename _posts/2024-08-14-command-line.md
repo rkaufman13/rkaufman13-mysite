@@ -3,6 +3,7 @@ layout: post
 title: "Leveling Up on the Command Line"
 categories: things-i-learned
 excerpt_separator: <!--more-->
+description: I like the CLI.
 ---
 ![I'm a hacker, ma!](/assets/imahacker.jpg)
 

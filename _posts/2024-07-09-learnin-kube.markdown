@@ -3,6 +3,7 @@ layout: post
 title: "Learnin' Kubernetes"
 categories: things-i-learned
 excerpt_separator: <!--more-->
+description: Nobody really knows what Kubernetes is.
 ---
 
 ![A Greek trireme, steered by a helmsman..get it?](/assets/trireme.jpg)

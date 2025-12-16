@@ -3,6 +3,7 @@ layout: post
 title: Training a Reinforcement Learning Algo for the Math-Phobic
 categories: presentations
 excerpt_separator: <!--more-->
+description: "Or: I forced a bot to play 10,000 games of tic-tac-toe"
 ---
 
 

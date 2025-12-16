@@ -4,6 +4,7 @@ title: Customizing the Command Line for Lazy People
 categories: things-i-learned
 tags: command-line linux
 excerpt_separator: <!--more-->
+description: The shell is personal. Why not make it customized to your every whim?
 ---
 
 The shell is personal. Why not make it customized to your every whim?

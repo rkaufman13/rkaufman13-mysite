@@ -4,6 +4,7 @@ title: "Fruit Tracker, my first Fitbit app, is live"
 categories: stuff-i-made
 excerpt_separator: <!--more-->
 project: "Fruit Tracker"
+description: I made a watch app.
 ---
 
 ![Image of a beautiful apple in the grass](/assets/apple.jpg)

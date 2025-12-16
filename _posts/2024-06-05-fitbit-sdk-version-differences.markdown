@@ -3,6 +3,7 @@ layout: post
 title: "More Fitbit Dev Resources"
 categories: things-i-learned
 excerpt_separator: <!--more-->
+description: The developing-for-fitbit journey continues.
 ---
 ![a stock photo of a person wearing a smartwatch. I'm not even sure if this is an actual fitbit.](/assets/is-this-even-a-fitbit.jpg)
 

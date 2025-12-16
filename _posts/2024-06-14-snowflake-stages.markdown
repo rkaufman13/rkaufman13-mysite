@@ -3,6 +3,7 @@ layout: post
 title: "What Is A Snowflake Stage?"
 categories: things-i-learned
 excerpt_separator: <!--more-->
+description: Turning CSVs into tables.
 ---
 
 ![Some snowflakes photographed under a microscope](/assets/PHOTO-snowflake-noaa-121516-1120x534-landscapehero.jpg)

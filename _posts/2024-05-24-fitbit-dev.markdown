@@ -3,6 +3,7 @@ layout: post
 title: "Developing for the Fitbit Versa"
 categories: things-i-learned
 excerpt_separator: <!--more-->
+description: My old watch is not really supported, but that won't stop me from trying.
 ---
 
 In my previous post I said something about learning Android app development so I could make a Fitbit app. However, silly me-- just because Google owns Fitbit now does not mean that Fitbits run Android. (:

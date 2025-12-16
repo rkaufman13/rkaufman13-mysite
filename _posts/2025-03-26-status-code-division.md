@@ -4,6 +4,7 @@ title: "What I Learned at Work Today: Status Code Tricks"
 categories: things-i-learned
 tags: java math
 excerpt_separator: <!--more-->
+description: Math is even harder if you're a computer.
 ---
 
 At work yesterday, I came across this snippet of code in a Java class meant to handle HTTP responses:

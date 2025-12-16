@@ -4,6 +4,7 @@ title: "Building a Queens clone in React"
 categories: stuff-i-made
 excerpt_separator: <!--more-->
 project: "Infinite Queens"
+description: A new twist on an age-old puzzle.
 ---
 
 ![This is a queen, right? I'm actually terrible at chess](/assets/queens-header.jpg)
