@@ -37,8 +37,12 @@
     <meta property="og:image" content="{{ page.image }}">
   {% elsif site.image %}
     <meta property="og:image" content="{{site.url}}{{ site.image }}">
+    {%else %}
+    <meta property="og:image" content="{{site.url}}{%og_filter %}">
+    <meta property="og:image:width" content="1190">
+    <meta property="og:image:height" content="630">
   {% endif %}
-  <meta name="twitter:card" content="{{ page.twitter_card.type | default: "summary" }}">
+  <meta name="twitter:card" content="{{ page.twitter_card.type | default: "summary_large_image" }}">
   {% if site.twitter_username %}<meta name="twitter:site" content="{{ site.twitter_username }}">{% endif %}
   <meta name="twitter:title" content="{{ title | truncate: 70 }}">
   <meta name="twitter:description" content="{{ description | truncate: 200 }}">
@@ -66,4 +70,5 @@
 
   {% include fonts.html %}
   {% include google_analytics.html %}
+  <script type="speculationrules">{  "prerender": [{    "where": { "href_matches": "/*" },    "eagerness": "moderate"  }]}</script>
 </head>

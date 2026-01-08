@@ -19,9 +19,9 @@ I love trying new things and solving big problems, but I also have found I love 
 
 I've led projects to build features from scratch (a login system now used by 1,000+ clients, rebuilding an Airflow job to take advantage of its built-in concurrency and shorten a job's processing time from 6 hours to 6 minutes) and also gotten to work under brilliant senior engineers to improve existing products.
 
-I'm also active as an organizer in [Women & Gender eXpansive Coders DC](https://www.meetup.com/women-and-gender-expansive-coders-dc-wgxc-dc/), a local tech group for women and nonbinary people in tech, and on the leadership committee for Attentive Women in Engineering, Attentive's ERG, where I plan and host events like brag workshops (inspired by [Julia Evans](https://jvns.ca/blog/brag-documents/)), speaker series, and social get-togethers.
+I'm also a director of [Women & Gender eXpansive Coders DC](https://www.meetup.com/women-and-gender-expansive-coders-dc-wgxc-dc/), a local tech nonprofit for women and nonbinary people in engineering and data science. I have previously served on the leadership committee for Attentive Women in Engineering, Attentive's ERG, where I planned and hosted events like brag workshops (inspired by [Julia Evans](https://jvns.ca/blog/brag-documents/)), speaker series, and social get-togethers.
 
-I have a [LinkedIn page](https://www.linkedin.com/in/rachelkaufman13/) that you might be interested in visiting (note: I mostly don't accept connection requests from strangers), as well as a [Github](https://www.linkedin.com/in/rachelkaufman13/). Oh, and I [give talks](https://www.meetup.com/women-and-gender-expansive-coders-dc-wgxc-dc/events/303967242/?eventOrigin=your_events), too. Say [hello](mailto:rkaufman13 at gmail dot com)?
+I have a [LinkedIn page](https://www.linkedin.com/in/rachelkaufman13/) that you might be interested in visiting (note: I mostly don't accept connection requests from strangers), as well as a [Github](https://www.linkedin.com/in/rachelkaufman13/). Oh, and I [give talks]({{site.baseurl}}{% link speaking.md%}), too. Say [hello](mailto:rkaufman13 at gmail dot com)?
 
 {%include breaking-news.html%}
 

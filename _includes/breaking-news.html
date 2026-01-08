@@ -3,8 +3,8 @@ where_exp:"post":"post.categories contains 'micro'"%} {%if relevant_posts.size >
 
 <h4>Recent Updates</h4>
 <ul style="list-style-type: none; padding: 0;">
-  {%for post in relevant_posts %}
-  <li>{{post.date | date: '%B %d, %Y'}}: <a href="{{post.external-url}}">{{post.title}}</a></li>
+  {%for post in relevant_posts | limit: 5 %}
+  <li>{{post.date | date: '%B %e, %Y'}}: <a href="{{post.external-url}}">{{post.title}}</a></li>
 
   {%endfor%}
 </ul>
