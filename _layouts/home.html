@@ -32,7 +32,7 @@ layout: default
          {% else %}
         <a class="page-link" href="{{ project.url | relative_url }}">
          {% endif %}
-      <img src="../assets/{{ project.hero }}" class="project-hero" alt="{{project-title}}"></a>
+      <img src="{{site.baseurl}}/assets/{{ project.hero }}" class="project-hero" alt="{{project-title}}"></a>
       </div>
     </div>
    
@@ -40,7 +40,7 @@ layout: default
   
 
 </div>
-<div style="text-align: right;font-size: large;" id="all-projects"><a href="all-projects/">> > >All projects</a></div>
+<div style="text-align: right;font-size: large;" id="all-projects"><a href="{{site.baseurl}}/all-projects/"> &raquo; All projects</a></div>
 
 
 
@@ -89,7 +89,6 @@ layout: default
 
   </ul>
 
-  <div style="text-align: right;font-size: large;"><a href="/archives/">> > >Blog archive</a></div>
-
+  {% include pagination.html %}
 
 </div>

@@ -5,7 +5,6 @@ categories: stuff-i-made
 excerpt_separator: <!--more-->
 project: "The Brookland Dish"
 description: Spinning up a FastAPI backend and discovering the complicated world of email webhooks.
-image: /assets/BrooklandDish.jpg
 ---
 
 ## 📖 + 🐍 = ?

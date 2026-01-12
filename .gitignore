@@ -6,3 +6,5 @@ _drafts
 vendor
 rakefile
 *.sh
+
+assets/opengraph

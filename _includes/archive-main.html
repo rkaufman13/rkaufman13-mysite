@@ -1,0 +1,42 @@
+{%if post.hidden == true %}
+    {%continue%}
+    {%endif%}
+    {% if post.categories contains "micro"%}
+    {%continue%}
+    {% endif %}
+      {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %} 
+      {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
+
+      <li>
+        <div class="archive-image-wrapper">
+          <div class="archive-image-wrapper-middle">
+          <div class="archive-image-wrapper-inner" >{%if post.image%}
+            <img src="{{site.url}}{{post.image}}" alt="" class="archive-image"/>
+    
+            {%else%}
+            <img src="{{site.url}}/assets/opengraph{{post.path | remove: '_posts' | remove: '.md' | remove: '.markdown'}}.png" alt="" class="archive-image-fill"/>
+            {%endif%}
+            </div>
+          </div>
+          <div>
+        
+
+        <h2>
+          {% if post.external-url %}
+            <a class="post-link" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
+          {% else %}
+            <a class="post-link" href="{{ post.url | relative_url }}"{% if lang != empty %} lang="{{ lang }}"{% endif %}>{{ post.title | escape }}</a>
+          {% endif %}
+        </h2>
+        <span class="post-meta">
+          {% include date.html date=post.date lang=lang %}
+          {% if post.categories != empty or post.tags != empty %}
+            {% include category_links.html categories=post.categories tags=post.tags %}
+          {% endif %}
+          {% if post.external-url %}
+            • <a href="{{ post.url | relative_url }}">Permalink</a>
+          {% endif %}
+        </span>
+        <p>{{post.content | strip_html | truncatewords:50}}</p>
+        </div>
+      </li>
