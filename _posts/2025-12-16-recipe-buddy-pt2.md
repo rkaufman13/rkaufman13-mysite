@@ -7,7 +7,7 @@ project: "The Brookland Dish"
 description: Jekyll-izing and making a github PR via API.
 ---
 
-In my [last post]({{site.baseurl}}{%link _posts/2025-12-12-recipe-buddy-part1.md%}), I talked about building a cookbook/recipe blog that stores recipes emailed to a special address. I talked about setting up the backend, the service that provides an 'email received' webhook, and the library that parses recipe information from a website using the Schema.org standardized schema.
+In my [last post]({{site.baseurl | relative_url}}{%link _posts/2025-12-12-recipe-buddy-part1.md%}), I talked about building a cookbook/recipe blog that stores recipes emailed to a special address. I talked about setting up the backend, the service that provides an 'email received' webhook, and the library that parses recipe information from a website using the Schema.org standardized schema.
 
 Where we left off, we had just grabbed all the information about a recipe -- name, ingredients, cook time, etc., and dumped them into a Python dict. Now, we can inject them into a Markdown template for use by Jekyll.
 
@@ -70,7 +70,7 @@ def do_github_stuff(content, filename): #i'm good at naming things
 
 That feels like a lot, and in some ways it is, but in other ways it's just five POSTs.
 
-All I can say is thank goodness I watched that [presentation about git commit hashes]({{site.baseurl}}{% link _posts/2025-04-28-git-commit-hash.md %}) earlier this year or this would have been significantly more difficult.
+All I can say is thank goodness I watched that [presentation about git commit hashes]({{site.baseurl | relative_url}}{% link _posts/2025-04-28-git-commit-hash.md %}) earlier this year or this would have been significantly more difficult.
 
 ### The frontend
 

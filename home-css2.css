@@ -1,3 +1,6 @@
+body{
+  margin:0px
+}
 .site-nav {
   font-size: 14px;
 }
@@ -195,4 +198,11 @@ margin: 10px 0;
   font-size: x-small;
   text-transform: uppercase;
   color: #555;
+}
+
+#header-decorative {
+  width: 100%;
+  height:3rem;
+ object-fit: cover; 
+ object-position: 25% 25%;
 }

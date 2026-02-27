@@ -135,12 +135,18 @@
 
 
 <svg id="truchet" width="1200" height="650">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%">
+      <stop offset="0%" stop-color="skyblue" class="stop1"/>
+      <stop offset="100%" stop-color="seagreen" class="stop2" />
+    </linearGradient>
+  </defs>
 </svg>
 
 <script>
 
 
-  const pallettes = [{"fg":"#F5EE9E","bg":"rgb(255, 179, 107)","text":"#115"},{"fg":"#2568BA","bg":"rgb(179, 123, 203)","text":"white"},{"fg":"#EDE7E3","bg":"#82C0CC","text":"rgb(35, 2, 94)"}]
+  const pallettes = [{"fg":"#F5EE9E","bg":"rgb(255, 179, 107)","text":"#115", "gradient1":"orange", "gradient2":"firebrick"},{"fg":"#2568BA","bg":"rgb(179, 123, 203)","text":"white", "gradient1":"rebeccapurple", "gradient2":"navy"},{"fg":"#EDE7E3","bg":"#82C0CC","text":"rgb(35, 2, 94)", "gradient1":"skyblue", "gradient2":"darkcyan"}]
 function selectPalette(){
   return pallettes[Math.floor(Math.random()*pallettes.length)];
 }
@@ -148,7 +154,7 @@ function selectPalette(){
 
 function addStylesheetRules(palette) {
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(`#truchet{color: ${palette.fg}; background-color:${palette.bg}} .background { fill: ${palette.bg}; } .foreground { fill:${palette.fg}} .regular {fill: ${palette.text}; }`);
+sheet.replaceSync(`#truchet{color: ${palette.fg}; background-color:${palette.bg}} .background { fill: ${palette.bg}; } .foreground { fill:${palette.fg}} .regular {fill: ${palette.text};} .stop1 {stop-color: ${palette.gradient1}} .stop2 {stop-color: ${palette.gradient2}}`);
 
 // Apply the stylesheet to a document:
 document.adoptedStyleSheets.push(sheet);
@@ -188,15 +194,28 @@ let y = baseY;
   }
 const lines = splitTextToLines(text);
 y-=lines.length*40;
+
+const lineLengths = lines.map(line=>line.split("").length);
+const maxLength = Math.max(...lineLengths)
+
+const x = Math.min(1140 - (maxLength*fontSize*.65),300)
+ svg.innerHTML+=`
+<rect x="0" y="${y-75}" width="100%" height="${900-y}" fill="url(#gradient)" opacity="0.5"/>
+ `;
 for (let i=0;i<lines.length;i++){
   
   svg.innerHTML+=`
-  <text class="regular" style="font: bold ${fontSize}px sans-serif; text-anchor:end" x=1140 y=${y+i*55} >${lines[i]}</text>
+  <text class="regular" id="headline" style="font: bold ${fontSize}px sans-serif; text-anchor:end" x=1140 y=${y+i*55} >${lines[i]}</text>
   `;
 }
 svg.innerHTML+=`
 <text class="regular"  style="font: bold ${Math.floor(fontSize*.6)}px serif;text-anchor:end; letter-spacing:0.05rem" x=1140 y=${y+lines.length*40+65}>A blog post by Rachel Kaufman</text>`;
+
+
+
 }
+
+
 
 
 

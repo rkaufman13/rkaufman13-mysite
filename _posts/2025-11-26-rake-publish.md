@@ -10,7 +10,7 @@ description: The quest to remove friction from posting to this blog continues.
 ![Randall Munroe as usual nails it.](/assets/automation_2x.png)
 *[xkcd](https://xkcd.com/1319)*
 
-The quest to remove friction from posting to this blog continues. In an earlier post, I [shared how I used rake to automatically generate a blog template for me and place it in Jekyll's drafts folder]({{site.baseurl}} {% link _posts/2025-07-12-rakefiles.md %}). Now, I realized I'd also like to handle publishing that post with approximately 10% fewer keystrokes.
+The quest to remove friction from posting to this blog continues. In an earlier post, I [shared how I used rake to automatically generate a blog template for me and place it in Jekyll's drafts folder]({{site.baseurl | relative_url}} {% link _posts/2025-07-12-rakefiles.md %}). Now, I realized I'd also like to handle publishing that post with approximately 10% fewer keystrokes.
 
 I'll share the script first, then explain my motivations and how it works.
 
