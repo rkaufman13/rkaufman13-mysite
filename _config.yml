@@ -36,6 +36,7 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-responsive-image
 paginate: 5
 paginate_path: archive/page:num/
 excerpt_separator: <!--more-->
@@ -55,6 +56,13 @@ csv_reader:
     - datetime
   headers: true
   encoding: utf-8
+
+responsive_image:
+  template: _includes/responsive-image.html
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 800
 
 # Exclude from processing.
 # The following items will not be processed, by default.

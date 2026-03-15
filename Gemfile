@@ -43,3 +43,5 @@ gem "kramdown-syntax-coderay", "~> 1.0"
 # for custom OG images
 gem "puppeteer-ruby"
 gem "rickshaw"
+
+gem "jekyll-responsive-image"

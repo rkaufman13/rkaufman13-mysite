@@ -35,8 +35,16 @@ layout: default
       /></a>
       {% else %}
       <a class="project-link" href="{{ project.url | relative_url }}" aria-label="{{project-title}}"
-        ><img src="/assets/{{ project.hero }}" class="project-hero" alt="{{project-title}}"
-      /></a>
+        >
+        {% capture path %}
+        assets/{{project.hero}}
+        {%endcapture%}
+{% responsive_image_block %}
+  path: {{ path }}
+  alt: {{ project.title }}
+{% endresponsive_image_block %}
+
+      </a>
       {% endif %}
     </div>
   </div>

@@ -32,7 +32,13 @@ layout: default
          {% else %}
         <a class="page-link" href="{{ project.url | relative_url }}">
          {% endif %}
-      <img src="{{site.baseurl | relative_url}}/assets/{{ project.hero }}" class="project-hero" alt="{{project-title}}"></a>
+          {% capture path %}
+        assets/{{project.hero}}
+        {%endcapture%}
+{% responsive_image_block %}
+  path: {{ path }}
+  alt: {{ project.title }}
+{% endresponsive_image_block %}
       </div>
     </div>
    
