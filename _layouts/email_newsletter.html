@@ -1,0 +1,50 @@
+{%include head.html%}
+{%include css_main.html%}
+{%include email_styles.html%}
+
+<img src="{{site.baseurl | relative_url}}{% custom_header_image %}" alt="" role="presentation" id="header-decorative"/>
+
+<div class="wrapper">
+<div class="email">
+
+  Thanks for subscribing to my newsletter. Here's what I've been writing about lately.
+
+  <hr/>
+  <ul class="post-list">
+    {% for post in site.posts limit:3 %}
+      {%if post.categories contains "micro"%}
+     <div class="micro-homepage">
+        <span>Mini-update</span>
+        <h3><a href="{{ post.external-url}}">{{ post.title | escape }}</a></h3>
+     </div>
+     {% else %}
+      <li>
+        <header class="post-header">
+          <h1 class="post-title">
+            {% if post.external-url %}
+              <a class="post-link" href="{{ post.external-url }}">{{ post.title | escape }} &rarr;</a>
+            {% else %}
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {% endif %}
+          </h1>
+
+          <p class="post-meta">
+            {% include date.html date=post.date%}
+          
+            {% if post.external-url %}
+              • <a href="{{ post.url | relative_url }}">Permalink</a>
+            {% endif %}
+          </p>
+        </header>
+
+        <div class="post-content">
+          {{ post.content | strip_html | truncatewords:50 }}
+        </div>
+      </li>
+            {%endif%}
+      {% endfor %}
+
+  </ul>
+
+</div>
+</div>

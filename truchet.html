@@ -133,20 +133,35 @@
 
 </svg>
 
+<style>
+  #headline {
+    font: bold;
+    font-family: sans-serif;
+    font-size: 40pt;
+    padding-right:2rem;
+    text-transform: capitalize;
+  }
+  h2 {
+    font-family: sans-serif;
+    padding-right: 2rem;
+  }
+</style>
+
 
 <svg id="truchet" width="1200" height="650">
-  <defs>
+  <!-- <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="0" y2="100%">
       <stop offset="0%" stop-color="skyblue" class="stop1"/>
       <stop offset="100%" stop-color="seagreen" class="stop2" />
     </linearGradient>
-  </defs>
-</svg>
+  </defs> -->
+</svg> 
+<div style="z-index: 10; width:1200px; position:absolute;bottom: 0; padding:4rem 0;text-anchor:end;letter-spacing: 0.05rem;text-align:right" id="text" class="textGradient"></div>
 
 <script>
 
 
-  const pallettes = [{"fg":"#F5EE9E","bg":"rgb(255, 179, 107)","text":"#115", "gradient1":"orange", "gradient2":"firebrick"},{"fg":"#2568BA","bg":"rgb(179, 123, 203)","text":"white", "gradient1":"rebeccapurple", "gradient2":"navy"},{"fg":"#EDE7E3","bg":"#82C0CC","text":"rgb(35, 2, 94)", "gradient1":"skyblue", "gradient2":"darkcyan"}]
+  const pallettes = [{"fg":"#F5EE9E","bg":"rgb(255, 179, 107)","text":"#115", "gradient1":"rgba(255,165,0,0.20)", "gradient2":"rgba(178,34,34,0.65)"},{"fg":"#2568BA","bg":"rgb(179, 123, 203)","text":"white", "gradient1":"rgba(102, 51, 153,0.2)", "gradient2":"rgba(0, 0, 128,0.65)"},{"fg":"#EDE7E3","bg":"#82C0CC","text":"rgb(35, 2, 94)", "gradient1":"rgba(135, 206, 235, 0.2)", "gradient2":"rgba(0, 139, 139,0.65)"}]
 function selectPalette(){
   return pallettes[Math.floor(Math.random()*pallettes.length)];
 }
@@ -154,66 +169,63 @@ function selectPalette(){
 
 function addStylesheetRules(palette) {
 const sheet = new CSSStyleSheet();
-sheet.replaceSync(`#truchet{color: ${palette.fg}; background-color:${palette.bg}} .background { fill: ${palette.bg}; } .foreground { fill:${palette.fg}} .regular {fill: ${palette.text};} .stop1 {stop-color: ${palette.gradient1}} .stop2 {stop-color: ${palette.gradient2}}`);
-
+sheet.replaceSync(`#truchet{color: ${palette.fg}; background-color:${palette.bg}} .background { fill: ${palette.bg}; } .foreground { fill:${palette.fg}} .regular {fill: ${palette.text};} .stop1 {stop-color: ${palette.gradient1}} .stop2 {stop-color: ${palette.gradient2}} .textGradient{background: linear-gradient(to bottom, ${palette.gradient1},${palette.gradient2});#headline{color:${palette.text}}; h2 {color: ${palette.text}}`);
 // Apply the stylesheet to a document:
 document.adoptedStyleSheets.push(sheet);
 
 }
 
-function splitTextToLines(text){
+// function splitTextToLines(text){
 
-const result = text.split(" ")
+// const result = text.split(" ")
 
-if (result.length<6){
-  return [text]}
-  else if (12>result.length){
-    const first = result.slice(0,Math.ceil(result.length/2));
-    const second = result.slice(Math.ceil(result.length/2));
+// if (result.length<6){
+//   return [text]}
+//   else if (12>result.length){
+//     const first = result.slice(0,Math.ceil(result.length/2));
+//     const second = result.slice(Math.ceil(result.length/2));
     
-    return [first.join(" "),second.join(" ")]
-  } else {
-    const first = result.slice(0,Math.ceil(result.length/3));
-    const second = result.slice(Math.ceil(result.length/3),Math.ceil(result.length/3)*2);
-    const third = result.slice(Math.ceil(result.length/3)*2);
+//     return [first.join(" "),second.join(" ")]
+//   } else {
+//     const first = result.slice(0,Math.ceil(result.length/3));
+//     const second = result.slice(Math.ceil(result.length/3),Math.ceil(result.length/3)*2);
+//     const third = result.slice(Math.ceil(result.length/3)*2);
     
-    return [first.join(" "),second.join(" "),third.join(" ")]
-  }
-}
+//     return [first.join(" "),second.join(" "),third.join(" ")]
+//   }
+// }
 
-function createText(text){
-  const svg = document.getElementById("truchet");
-  const baseFontSize = 70;
-  let fontSize = baseFontSize;
+// function createText(text){
+//   const svg = document.getElementById("truchet");
+//   const baseFontSize = 70;
+//   let fontSize = baseFontSize;
 
-const baseY = 500;
-let y = baseY;
+// const baseY = 500;
+// let y = baseY;
 
-  if (text.length >30){
-    fontSize= Math.floor(fontSize*.85);
-  }
-const lines = splitTextToLines(text);
-y-=lines.length*40;
+//   if (text.length >30){
+//     fontSize= Math.floor(fontSize*.85);
+//   }
+// const lines = splitTextToLines(text);
+// y-=lines.length*40;
 
-const lineLengths = lines.map(line=>line.split("").length);
-const maxLength = Math.max(...lineLengths)
+// const lineLengths = lines.map(line=>line.split("").length);
+// const maxLength = Math.max(...lineLengths)
 
-const x = Math.min(1140 - (maxLength*fontSize*.65),300)
- svg.innerHTML+=`
-<rect x="0" y="${y-75}" width="100%" height="${900-y}" fill="url(#gradient)" opacity="0.5"/>
- `;
-for (let i=0;i<lines.length;i++){
+// const x = Math.min(1140 - (maxLength*fontSize*.65),300)
+ 
+// for (let i=0;i<lines.length;i++){
   
-  svg.innerHTML+=`
-  <text class="regular" id="headline" style="font: bold ${fontSize}px sans-serif; text-anchor:end" x=1140 y=${y+i*55} >${lines[i]}</text>
-  `;
-}
-svg.innerHTML+=`
-<text class="regular"  style="font: bold ${Math.floor(fontSize*.6)}px serif;text-anchor:end; letter-spacing:0.05rem" x=1140 y=${y+lines.length*40+65}>A blog post by Rachel Kaufman</text>`;
+//   svg.innerHTML+=`
+//   <text class="regular" id="headline" style="font: bold ${fontSize}px sans-serif; text-anchor:end" x=1140 y=${y+i*55} >${lines[i]}</text>
+//   `;
+// }
+// svg.innerHTML+=`
+// <text class="regular"  style="font: bold ${Math.floor(fontSize*.6)}px serif;text-anchor:end; letter-spacing:0.05rem" x=1140 y=${y+lines.length*40+65}>A blog post by Rachel Kaufman</text>`;
 
 
 
-}
+// }
 
 
 
@@ -263,8 +275,11 @@ if (!svg){
   } else {
   const palette = selectPalette();
 drawTruchetTiles(svg,tiles,getTilePositions({columns:45,rows:12,tileSize:12}),8)
-createText(text.get("foo"));
+
 addStylesheetRules(palette);
+const textDiv = document.getElementById("text");
+textDiv.innerHTML=`<h1 id="headline">${text.get("foo")}</h1><br><h2>A blog post by Rachel Kaufman</h2>`;
   }
 }
 </script>
+

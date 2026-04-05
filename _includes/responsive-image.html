@@ -4,15 +4,11 @@
 {% endfor %}
 {% endcapture %}
 
-{%assign sorted_resized = resized | sort: 'width' %}
-{%assign smallest = sorted_resized[0]%}
-{%assign medium = sorted_resized[1]%}
-{%assign biggest = sorted_resized[2]%}
 
 
 <picture>
-    <source srcset="{{ smallest.path }}" media="(max-width:400px)">
-    <source srcset="{{ medium.path }}" media="(max-width:800px)">
-    <source srcset="{{ biggest.path }}">
-    <img src="/{{ path }}" alt="{{ alt }}">
+     {% for i in resized %}
+        <source media="(min-width: {{ i.width }}px)" srcset="{{ i.path | prepend: '/'| prepend: site.baseurl | prepend: site.url}}">
+    {% endfor %}
+    <img src="{{ path |prepend: '/' | prepend: site.baseurl | prepend: site.url }}" alt="{{ alt }}">
 </picture>
