@@ -86,10 +86,11 @@ layout: null
         <summary type="html">{{ post.description | strip_html | normalize_whitespace | xml_escape }}</summary>
       {% endif %}
 
-      {% assign post_image = post.twitter_card.image | default: post.facebook.image %}
+      {% capture post_name %}assets/opengraph/{{post.date | date: "%Y-%m-%d"}}-{{post.slug}}.png{% endcapture %}
+      {% assign post_image = post_name %}
       {% if post_image %}
         {% unless post_image contains "://" %}
-          {% assign post_image = post_image | absolute_url | xml_escape  %}
+          {% assign post_image = post_image | absolute_url |xml_escape %}
         {% endunless %}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image }}" />
       {% endif %}
