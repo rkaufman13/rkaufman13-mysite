@@ -19,7 +19,7 @@ module Jekyll
                Puppeteer.launch(headless: true) do |browser|
                page = browser.new_page
                page.goto("file:///home/rachel/rkaufman13-mysite/truchet.html?foo=#{context["page"]["title"]}")
-               page.screenshot(path: "#{Dir.pwd}/assets/opengraph/#{id}.png", type:"png",clip: {x:10,y:10, width:1190, height:630})
+               page.screenshot(path: "#{Dir.pwd}/assets/opengraph/#{id}.png", type:"png",clip: {x:10,y:10, width:1210, height:640})
                
             end
         end  

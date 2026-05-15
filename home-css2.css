@@ -216,6 +216,11 @@ margin: 10px 0;
 }
 
 /* termynal css */
+
+#termynal {
+  margin-bottom:2rem;
+}
+
 [data-termynal] {
     width: 750px;
     max-width: 100%;

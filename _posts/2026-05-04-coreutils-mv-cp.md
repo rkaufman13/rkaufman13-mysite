@@ -5,7 +5,7 @@ categories: things-i-learned
 tags: coreutils bash cli
 excerpt_separator: <!--more-->
 project: "30 Days of Coreutils"
-description: Starting off with a twofer, becaues why not.
+description: Starting off with a twofer, because why not.
 ---
 
 {% include coreutils-header.html util="cp && mv" %}

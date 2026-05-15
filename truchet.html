@@ -138,26 +138,29 @@
     font: bold;
     font-family: sans-serif;
     font-size: 45pt;
-    padding-right:2rem;
+    padding-right:5rem;
     text-transform: capitalize;
   }
   h2 {
     font-family: sans-serif;
-    padding-right: 2rem;
+    padding-right: 5rem;
     font-size:35pt;
   }
 </style>
 
 
-<svg id="truchet" width="1200" height="650">
+<svg id="truchet" width="1250" height="850">
   
 </svg> 
-<div style="z-index: 10; width:1200px; position:absolute;bottom: -50; padding:4rem 0;text-anchor:end;letter-spacing: 0.05rem;text-align:right" id="text" class="textGradient"></div>
+<div style="z-index: 10; width:1250px; position:absolute;bottom: -50; padding:4rem 0;text-anchor:end;letter-spacing: 0.05rem;text-align:right" id="text" class="textGradient"></div>
 
 <script>
 
 
-  const pallettes = [{"fg":"#F5EE9E","bg":"rgb(255, 179, 107)","text":"#115", "gradient1":"rgba(255,165,0,0.20)", "gradient2":"rgba(178,34,34,0.65)"},{"fg":"#2568BA","bg":"rgb(179, 123, 203)","text":"white", "gradient1":"rgba(102, 51, 153,0.2)", "gradient2":"rgba(0, 0, 128,0.65)"},{"fg":"#EDE7E3","bg":"#82C0CC","text":"rgb(35, 2, 94)", "gradient1":"rgba(135, 206, 235, 0.2)", "gradient2":"rgba(0, 139, 139,0.65)"}]
+  const pallettes = [
+    {"fg":"#F5EE9E","bg":"rgb(255, 179, 107)","text":"#115", "gradient1":"rgba(255,165,0,0.20)", "gradient2":"rgba(178,34,34,0.65)"},
+    {"fg":"#2568BA","bg":"rgb(179, 123, 203)","text":"white", "gradient1":"rgba(102, 51, 153,0.2)", "gradient2":"rgba(0, 0, 128,0.65)"},
+    {"fg":"#EDE7E3","bg":"#82C0CC","text":"rgb(35, 2, 94)", "gradient1":"rgba(135, 206, 235, 0.2)", "gradient2":"rgba(0, 139, 139,0.65)"}]
 function selectPalette(){
   return pallettes[Math.floor(Math.random()*pallettes.length)];
 }
@@ -170,60 +173,6 @@ sheet.replaceSync(`#truchet{color: ${palette.fg}; background-color:${palette.bg}
 document.adoptedStyleSheets.push(sheet);
 
 }
-
-// function splitTextToLines(text){
-
-// const result = text.split(" ")
-
-// if (result.length<6){
-//   return [text]}
-//   else if (12>result.length){
-//     const first = result.slice(0,Math.ceil(result.length/2));
-//     const second = result.slice(Math.ceil(result.length/2));
-    
-//     return [first.join(" "),second.join(" ")]
-//   } else {
-//     const first = result.slice(0,Math.ceil(result.length/3));
-//     const second = result.slice(Math.ceil(result.length/3),Math.ceil(result.length/3)*2);
-//     const third = result.slice(Math.ceil(result.length/3)*2);
-    
-//     return [first.join(" "),second.join(" "),third.join(" ")]
-//   }
-// }
-
-// function createText(text){
-//   const svg = document.getElementById("truchet");
-//   const baseFontSize = 70;
-//   let fontSize = baseFontSize;
-
-// const baseY = 500;
-// let y = baseY;
-
-//   if (text.length >30){
-//     fontSize= Math.floor(fontSize*.85);
-//   }
-// const lines = splitTextToLines(text);
-// y-=lines.length*40;
-
-// const lineLengths = lines.map(line=>line.split("").length);
-// const maxLength = Math.max(...lineLengths)
-
-// const x = Math.min(1140 - (maxLength*fontSize*.65),300)
- 
-// for (let i=0;i<lines.length;i++){
-  
-//   svg.innerHTML+=`
-//   <text class="regular" id="headline" style="font: bold ${fontSize}px sans-serif; text-anchor:end" x=1140 y=${y+i*55} >${lines[i]}</text>
-//   `;
-// }
-// svg.innerHTML+=`
-// <text class="regular"  style="font: bold ${Math.floor(fontSize*.6)}px serif;text-anchor:end; letter-spacing:0.05rem" x=1140 y=${y+lines.length*40+65}>A blog post by Rachel Kaufman</text>`;
-
-
-
-// }
-
-
 
 
 
