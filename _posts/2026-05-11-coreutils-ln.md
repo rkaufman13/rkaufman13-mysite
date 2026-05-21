@@ -28,7 +28,7 @@ shortcut -> file1.txt
 
 If I were to then `rm file1.txt` and then `ls -l` again, on my system there's a nice red warning telling me that there's an orphaned symlink:
 
-![A screenshot showing `shortcut -> file1.txt` but in a deep warning red](assets/ln.png)
+![A screenshot showing `shortcut -> file1.txt` but in a deep warning red](/assets/ln.png)
 
 There are quite a few other flags available for `ln` which honestly I don't think are that useful in 2026. But basic symlinks are very powerful, and they pop up everywhere in Linux systems (such as the [sites-available/sites-enabled pattern](https://www.reddit.com/r/devops/comments/b7g9wo/comment/ejriqmn/) on both apache and nginx servers[^1].)
 
