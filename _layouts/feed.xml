@@ -2,7 +2,10 @@
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"{% if site.lang %} xml:lang="{{ site.lang }}"{% endif %}>
+<feed xmlns="http://www.w3.org/2005/Atom"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+
+{% if site.lang %} xml:lang="{{ site.lang }}"{% endif %}>
   <generator uri="http://jekyllrb.com" version="{{ jekyll.version }}">Jekyll</generator>
   {% assign feed_path = "/feed.xml" %}
   {% if site.feed and site.feed.path %}
@@ -11,7 +14,7 @@ layout: null
   <link href="{{ feed_path | absolute_url }}" rel="self" type="application/atom+xml" />
   <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html" {% if site.lang %}hreflang="{{ site.lang }}" {% endif %}/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ '/' | absolute_url | xml_escape }}/</id>
+  <id>{{ '/' | absolute_url | xml_escape }}</id>
 
   {% if site.title %}
     <title type="html">{{ site.title | smartify | xml_escape }}</title>
@@ -85,7 +88,9 @@ layout: null
       {% if post.description and post.description != empty %}
         <summary type="html">{{ post.description | strip_html | normalize_whitespace | xml_escape }}</summary>
       {% endif %}
-
+      {% if post.content and post.content !=empty%}
+      <content:encoded>{{post.content | xml_escape}}</content:encoded>
+      {% endif %}
       {% capture post_name %}assets/opengraph/{{post.date | date: "%Y-%m-%d"}}-{{post.slug}}.png{% endcapture %}
       {% assign post_image = post_name %}
       {% if post_image %}
@@ -93,6 +98,7 @@ layout: null
           {% assign post_image = post_image | absolute_url |xml_escape %}
         {% endunless %}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image }}" />
+        <media:content  xmlns:media="http://search.yahoo.com/mrss/" url="{{post_image}}" medium="image"/>
       {% endif %}
     </entry>
   {% endunless %}

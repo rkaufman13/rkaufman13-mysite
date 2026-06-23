@@ -285,3 +285,54 @@ margin: 10px 0;
 [data-ty][data-ty-prompt]:before {
     content: attr(data-ty-prompt);
 }
+
+
+div.bubbles-vote {
+    a.bubbles-vote-btn {
+        /* the bubble after the label */
+        span:last-child::after {
+            content: ' 🫧';
+        }
+ 
+        position: relative;
+        display: inline-block;
+        font-weight: 600;
+        transform-origin: center center;
+ 
+        &:hover {
+            /* bobbing on hover */
+            animation: bob 0.8s ease-in-out infinite;
+        }
+ 
+        /* small bubbles */
+        &::before,
+        &::after {
+            content: "🫧";
+            position: absolute;
+            right: 0;
+            font-size: 0.7em;
+            opacity: 0;
+            pointer-events: none;
+        }
+ 
+        /* animate the bubbles */
+        &::before {
+            animation: floatUp 1.2s ease-out infinite;
+        }
+ 
+        &::after {
+            animation: floatUp 1.2s ease-out infinite 0.6s;
+            left: 1.5em;
+        }
+    }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(1.5deg); }
+  50%      { transform: translateY(0) rotate(-1.5deg); }
+}
+ 
+@keyframes floatUp {
+  0%   { opacity: 0; transform: translateY(0) scale(0.4); }
+  20%  { opacity: 0.9; }
+  100% { opacity: 0; transform: translateY(-30px) scale(1) translateX(8px); }
+}
