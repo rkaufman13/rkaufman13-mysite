@@ -2,6 +2,7 @@
 --ty-color-bg: #252a33;
     --ty-color-text: #00ff00;
     --ty-color-text-subtle: #88cc88;
+    --my-accent:#487bb9;
 }
 
 body{
@@ -107,6 +108,10 @@ body{
     margin-top: 2rem;
     border-top:1px solid black;
     padding-top:2rem;
+  }
+
+  .post-list >li {
+    margin-bottom: auto;
   }
 
   .post-list :first-child {
@@ -286,53 +291,30 @@ margin: 10px 0;
     content: attr(data-ty-prompt);
 }
 
-
+div.bubbles-footer {
+display: flex;
+justify-content: end;
+padding: 1rem;
+}
 div.bubbles-vote {
     a.bubbles-vote-btn {
+      span:last-child {
+        font-family: Bitter, "Apple SD Gothic Neo", AppleGothic, NanumBarunGothic, "Malgun Gothic", Dotum, sans-serif;
+        font-weight: normal;
+        margin-left:0.25em;
+      }
         /* the bubble after the label */
         span:last-child::after {
             content: ' 🫧';
         }
- 
         position: relative;
         display: inline-block;
         font-weight: 600;
-        transform-origin: center center;
+        transform-origin: center center;       
  
-        &:hover {
-            /* bobbing on hover */
-            animation: bob 0.8s ease-in-out infinite;
-        }
- 
-        /* small bubbles */
-        &::before,
-        &::after {
-            content: "🫧";
-            position: absolute;
-            right: 0;
-            font-size: 0.7em;
-            opacity: 0;
-            pointer-events: none;
-        }
- 
-        /* animate the bubbles */
-        &::before {
-            animation: floatUp 1.2s ease-out infinite;
-        }
- 
-        &::after {
-            animation: floatUp 1.2s ease-out infinite 0.6s;
-            left: 1.5em;
-        }
+      }
+    
+    .bubbles-vote-tri{
+      color: var(--my-accent)
     }
-}
-@keyframes bob {
-  0%, 100% { transform: translateY(0) rotate(1.5deg); }
-  50%      { transform: translateY(0) rotate(-1.5deg); }
-}
- 
-@keyframes floatUp {
-  0%   { opacity: 0; transform: translateY(0) scale(0.4); }
-  20%  { opacity: 0.9; }
-  100% { opacity: 0; transform: translateY(-30px) scale(1) translateX(8px); }
-}
+    }

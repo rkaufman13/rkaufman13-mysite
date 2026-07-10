@@ -21,10 +21,12 @@ layout: default
       {% include custom_comments_provider.html %}
     </div>
   {% endif %}
-<!-- 
-  <div class="bubbles-vote" data-format="emoji"></div>
+
+<div class="bubbles-footer">
+  <div class="bubbles-vote" data-url="{{site.url}}{{page.url}}"></div>
 <script src="https://bubbles.town/vote.js" defer></script>
-     -->
+</div>
+    
     {% assign category = page.categories[0] %}
     {% assign items = site.posts | where: "categories",category | where_exp: "item", "item.title!=page.title" |
        sample: 3 %}
