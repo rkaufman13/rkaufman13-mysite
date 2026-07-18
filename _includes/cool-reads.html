@@ -1,0 +1,7 @@
+{%assign reads = site.data.reads | reverse| limit: 5%}
+<h2>What I've been reading</h2>
+<i>Interesting articles, mostly (but not exclusively) tech-related, from around the web.</i>
+<ul>
+    {%for read in reads |reverse %}
+    <li><a href={{read.url}}>{{read.title}}</a> <i>{{read.note}}</i></li>
+{%endfor%}</ul>

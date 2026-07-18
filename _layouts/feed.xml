@@ -88,9 +88,19 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/"
       {% if post.description and post.description != empty %}
         <summary type="html">{{ post.description | strip_html | normalize_whitespace | xml_escape }}</summary>
       {% endif %}
+      <content:encoded>
       {% if post.content and post.content !=empty%}
-      <content:encoded>{{post.content | xml_escape}}</content:encoded>
+      {{post.content | xml_escape}}
       {% endif %}
+            {% if post.links %}
+      &lt;ul&gt;
+    {% for link in post.links %}
+    {% capture full_link%} <li><a href={{link[1].url}}>{{link[1].title}}</a> <i>{{link[1].note}}</i></li>{%endcapture%}
+    {{full_link|xml_escape}}
+  {%endfor%}  
+  &lt;/ul&gt;
+      {% endif %}
+      </content:encoded>
       {% capture post_name %}assets/opengraph/{{post.date | date: "%Y-%m-%d"}}-{{post.slug}}.png{% endcapture %}
       {% assign post_image = post_name %}
       {% if post_image %}

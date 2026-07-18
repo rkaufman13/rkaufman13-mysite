@@ -24,6 +24,17 @@ body{
   float:right !important
 }
 
+.page-content {
+  padding:0
+}
+
+h2.project-header {
+padding-top: 30px;
+}
+
+.site-header .wrapper {
+  padding:20px 0;
+}
 
 @media screen and (min-width:801px){
   .project-list {
@@ -105,7 +116,7 @@ body{
 
   
   .post-list {
-    margin-top: 2rem;
+    
     border-top:1px solid black;
     padding-top:2rem;
   }
