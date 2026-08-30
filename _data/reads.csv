@@ -1,6 +1,11 @@
-url,title,note
-https://danq.me/2026/07/15/no-stats/,How I (Don’t) Collect Blog Statistics,Coming soon to a blog near you.
-https://xeiaso.net/notes/2026/check-your-smart-tv/,You should probably check on your smart appliances,Uh oh. Big if true.
-https://benjaminwil.info/weblog/variation-selector-15/,Unicode Variation Selector-15 and some of my tears,Unicode was already black magic; this makes it worse.
-https://fuglede.github.io/llama.ttf/,llama.ttf,A font that contains a LLM. What could go wrong? (It's only 280 gb..)
-https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/,Your ‘App’ Could Have Been a Webpage (so I fixed it for you…),The hero we need.
+Timestamp,title,url,note
+7/20/2026 17:48:55,The sneakerweb: A parallel web transported by physical media,https://sneakerweb.org/,I can envision a world where I'm carrying around a thumb drive for YEARS until someone wants to swap with me :(
+7/30/2026 8:50:00,The Joy of Typing,https://medium.com/message/the-joy-of-typing-fd8d091ab8ef,"An old (12 years!) piece about when typing can be superior to handwriting. Some parts haven't aged well in light of the last few years, but an interesting read nonetheless."
+8/3/2026 19:48:12,The Mystery Of Why Uber Gave Me 77 Free Rides,https://ironicsans.ghost.io/the-mystery-of-why-uber-gave-me-77-free-rides/,The fact that Uber let this happen is remarkable.
+8/19/2026 8:00:59,The end of Google Search - and The Internet - as We Know It,https://www.theringer.com/2026/08/04/tech/google-search-ai-internet,Cloudflare blocking googlebot by default starting next month? Wild.
+8/20/2026 8:59:51,Why can't you combine .tar.gz files with cat?,https://alexwlchan.net/2026/cat-confusion/,A deep dive into how .tar and .gz work. I learned something
+,How I (Don’t) Collect Blog Statistics,https://danq.me/2026/07/15/no-stats/,Coming soon to a blog near you.
+,You should probably check on your smart appliances,https://xeiaso.net/notes/2026/check-your-smart-tv/,Uh oh. Big if true.
+,Unicode Variation Selector-15 and some of my tears,https://benjaminwil.info/weblog/variation-selector-15/,Unicode was already black magic; this makes it worse.
+,llama.ttf,https://fuglede.github.io/llama.ttf/,A font that contains a LLM. What could go wrong? (It's only 280 gb..)
+,Your ‘App’ Could Have Been a Webpage (so I fixed it for you…),https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/,The hero we need.

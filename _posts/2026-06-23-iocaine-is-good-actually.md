@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 description: The "deadliest poison known to AI" is very easy to set up. You should.
 ---
 
-![Prince Humperdinck, from The Princess Bride, right after he's smelled (somehow) the odorless iocaine powder used to kill Vizzini.](/assets/humperdinck-iocaine.jpg)
+![Prince Humperdinck, from The Princess Bride, right after he's smelled (somehow) the odorless iocaine powder used to kill Vizzini.](/assets/2026/humperdinck-iocaine.jpg)
 
 Wikipedia recently announced that it is blocking 2 billion bot visits per day. Somewhere between [a third](https://radar.cloudflare.com/traffic?dateRange=52w#bot-vs-human) to [half](https://www.cnbc.com/2026/03/26/ai-bots-humans-internet.html) of all the traffic on the Internet is bots, and most of those bots are AI crawlers.
 

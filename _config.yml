@@ -37,6 +37,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-responsive-image
+  - jekyll-cache-bust
 paginate: 5
 paginate_path: archive/page:num/
 excerpt_separator: <!--more-->
@@ -63,6 +64,9 @@ responsive_image:
     - width: 320
     - width: 480
     - width: 800
+
+liquid:
+  strict_filters: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

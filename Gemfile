@@ -45,3 +45,4 @@ gem "puppeteer-ruby"
 gem "rickshaw"
 
 gem "jekyll-responsive-image"
+gem "jekyll-cache-bust"

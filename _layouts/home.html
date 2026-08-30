@@ -55,8 +55,9 @@ layout: default
 
       </li>
  {%endif%}
+ {% if firstpost.layout!='cool-reads-post'%}
  {% include cool-reads.html %}
-
+{%endif%}
     {% for post in paginator.posts offset:1  %}
       {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
       {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}

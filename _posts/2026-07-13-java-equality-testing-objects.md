@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 description: Testing for object equality can be painful, but it doesn't have to be.
 ---
 
-![A vintage-looking set of grocery scales. They are roughly equally balanced.](/assets/equality-scales.jpg)
+![A vintage-looking set of grocery scales. They are roughly equally balanced.](/assets/2026/equality-scales.jpg)
 
 This is mainly a note to myself because I'm pretty sure I've "learned" this material at least twice before, then forgotten it. Maybe the third time (and writing it down) will help it stick.
 
@@ -45,7 +45,7 @@ To make things worse, `assertEquals` DOES use the object's overridden `.equals()
 
 ## There's gotta be a better way!
 
-![A short GIF from the 'Friends' episode where Joey says "There's gotta be a better way!"](/assets/joey-better-way.gif)
+![A short GIF from the 'Friends' episode where Joey says "There's gotta be a better way!"](/assets/2026/joey-better-way.gif)
 
 You're so right, there is!
 

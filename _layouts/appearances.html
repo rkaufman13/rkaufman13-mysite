@@ -4,6 +4,8 @@ layout: default
 
 <h1>Speaking Appearances</h1>
 
+<p>I love presenting at conferences on Javascript, unit testing, soft skills for devs, and more. Feel free to <a href="{% link about.md %}">reach out</a> if you are interested in my talks.</p>
+
 {% assign current_date = 'now' | date: '%s' %}
 {% assign all_appearances = site.data.speaking_appearances | sort:'event_date' %}
 <h2>Upcoming</h2>
@@ -42,6 +44,13 @@ layout: default
 
  - {{row.venue}}
   
+{% if row.donut %}
+(<a href="{{site.baseurl |relative_url}}{% link assets/donuts/{{row.donut}}%}">donut</a>)
+{%endif%}
 </p>
 {%endif%}
+
 {% endfor %}
+
+<hr>
+<p>Why donuts? <a href="https://larahogan.me/donuts/">Lara Hogan</a> eats a donut after a milestone, and I decided I wanted to, too. I didn't start tracking them until mid-2026, so many of these previous appearances are "missing" donuts, but I assure you, many donuts have been eaten and will continue to be eaten.</p>

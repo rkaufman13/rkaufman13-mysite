@@ -9,8 +9,7 @@ module Jekyll
         end
 
         def render(context)
-             asdf
-            #Time.now.strftime("%Y, %B %d")
+             Time.now.strftime("%B %d, %Y")
         end
     end
     

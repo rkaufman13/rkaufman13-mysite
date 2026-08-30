@@ -45,4 +45,4 @@ sudo renice -n -5 318494
 
 You can see (and set) niceness levels with `htop` and probably other process monitors. And now you know how important it is to be nice.
 
-![Writing this post made me think "Very nice" to myself multiple times, so here's a gif of Sacha Baron Cohen as Borat saying "Very nice!"](assets/borat-borat-very-nice.gif)
+![Writing this post made me think "Very nice" to myself multiple times, so here's a gif of Sacha Baron Cohen as Borat saying "Very nice!"](/assets/borat-borat-very-nice.gif)
